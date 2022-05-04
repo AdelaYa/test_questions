@@ -20,7 +20,7 @@ def greet():
     return {"hello": "world!."}
 
 
-@app.get('/question', tags=["Question"], response_model=List[schemas.Question])
+@app.get('/questions', tags=["questions"], response_model=List[schemas.Question])
 def get_all_questions(skip: int = 0, limit: int = 100, db: Session = Depends(get_db)):
     """
     Get all Questions in database
